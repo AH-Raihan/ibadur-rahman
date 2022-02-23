@@ -1,0 +1,35 @@
+{
+    "name":"Darut Tarbia",
+    "description":"Darut Tarbia Hostel App",
+    "short_name":"Darut Tarbia",
+    "background_color":"#FFFFFF",
+    "scope":"/",
+    "start_url": "/",
+    "display":"standalone",
+    "orientation":"portaint",
+    "icons": [
+        {
+            "src": "images/dt-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/dt-logo.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "images/dt-logo.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "images/dt-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+
+
+}

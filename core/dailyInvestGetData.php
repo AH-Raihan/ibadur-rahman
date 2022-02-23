@@ -15,5 +15,6 @@ if(!isset($_COOKIE['PHPLGA'])){
                         <td><?php echo $data['quantity']; ?></td>
                         <td><?php echo $data['discount']; ?></td>
                         <td><?php echo $data['total_price']; ?></td>
+                        <td><?php echo $data['addedBy']; ?></td>
                     </tr>
                 <?php } ?>

@@ -31,6 +31,7 @@ if (!isset($_COOKIE['PHPLGA'])) {
                     <th>Quantity</th>
                     <th>Discount</th>
                     <th>T Price</th>
+                    <th>Added By</th>
                 </tr>
             </thead>
             <tbody id="investData">
@@ -49,6 +50,7 @@ if (!isset($_COOKIE['PHPLGA'])) {
                             <td><?php echo $data['quantity']; ?></td>
                             <td class="STaka"><?php echo $data['discount']; ?></td>
                             <td class="STaka"><?php echo $data['total_price']; ?></td>
+                            <td><?php echo $data['addedBy']; ?></td>
                         </tr>
                         <?php
                         $total += intval($data['total_price']);
@@ -143,6 +145,11 @@ if (!isset($_COOKIE['PHPLGA'])) {
                         Total Price <input type="text" list="priceData" id="totalprice" class="form-control" placeholder="Total Price" required>
                     </label>
                 </div>
+                <div class="row">
+                    <label for="addedBy" class="col-sm-12">
+                        Added By <input type="text" list="addedByList" id="addedBy" class="form-control" placeholder="Added By" required>
+                    </label>
+                </div>
             </div>
             <div class="modalMyFooter">
                 <div class="row">
@@ -153,6 +160,14 @@ if (!isset($_COOKIE['PHPLGA'])) {
         </div>
     </div>
     </div>
+
+
+    <datalist id="addedByList">
+        <option>Rakibul Islam</option>
+        <option>Arman</option>
+        <option>Hisan</option>
+        <option>Mujahid</option>
+    </datalist>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/datatables.min.js"></script>
@@ -167,9 +182,10 @@ if (!isset($_COOKIE['PHPLGA'])) {
             var discount = $("#discount").val();
             var quantity = $("#quantity").val();
             var totalprice = $("#totalprice").val();
+            var addedBy = $("#addedBy").val();
 
-            // insertToDatabase(item, price, quantity, discount, totalprice);
-            insertToStorage(item, price, quantity, discount, totalprice);
+            insertToDatabase(item, price, quantity, discount, totalprice, addedBy);
+            // insertToStorage(item, price, quantity, discount, totalprice);
         });
 
         function calculate() {
@@ -186,7 +202,7 @@ if (!isset($_COOKIE['PHPLGA'])) {
         }
 
 
-        function insertToDatabase(item, price, quantity, discount, totalprice) {
+        function insertToDatabase(item, price, quantity, discount, totalprice, addedBy) {
             if (totalprice === "") {
                 alert('price is empty');
             } else {
@@ -194,7 +210,8 @@ if (!isset($_COOKIE['PHPLGA'])) {
             price=${price}&&
             quantity=${quantity}&&
             discount=${discount}&&
-            total_price=${totalprice}
+            total_price=${totalprice}&&
+            addedBy=${addedBy}
             `)
                     .then(function(response) {
                         alert(response.data);
@@ -208,76 +225,11 @@ if (!isset($_COOKIE['PHPLGA'])) {
 
         }
 
-        function insertToStorage(item, price, quantity, discount, totalprice) {
-
-            if (!localStorage.getItem('listInvest')) {
-                var arr = new Array();
-                localStorage.setItem('listInvest', JSON.stringify(arr));
-            } else {
-                var beforeList = JSON.parse(localStorage.getItem('listInvest'));
-                beforeList.push({
-                    item: item,
-                    price: price,
-                    quantity: quantity,
-                    discount: discount,
-                    totalprice: totalprice
-                });
-                console.log(beforeList);
-                localStorage.setItem('listInvest', JSON.stringify(beforeList));
-                ifOnlieTable();
-            }
-
-
-        }
+        
 
 
 
-        var listFromStorage = JSON.parse(localStorage.getItem('listInvest'));
-
-        function ifOnlie() {
-            if (listFromStorage.length > 0) {
-
-                for (let i = 0; i < listFromStorage.length; i++) {
-                    axios.post(`core/dailyInvest_core.php?item=${listFromStorage[i].item}&&
-                        price=${listFromStorage[i].price}&&
-                        quantity=${listFromStorage[i].quantity}&&
-                        discount=${listFromStorage[i].discount}&&
-                        total_price=${listFromStorage[i].totalprice}
-                        `)
-                        .then(function(response) {
-                            investDataGet();
-                            STakaFu();
-                        })
-                        .catch(function(error) {
-                            alert(error.data);
-                        })
-
-                    if (i === listFromStorage.length - 1) {
-                        localStorage.setItem('listInvest', JSON.stringify(new Array()));
-                    }
-                }
-
-            }
-        }
-        function ifOnlieTable(){
-            if (navigator.onLine) {
-            ifOnlie();
-        }else{
-            document.getElementById('investData').innerHTML ='';
-            var localStorageList= JSON.parse(localStorage.getItem('listInvest'));
-            for (let i = 0; i < localStorageList.length; i++) {
-                document.getElementById('investData').innerHTML +=`<tr>
-                <td>${i}</td>
-                <td>${localStorageList[i].item}</td>
-                <td>${localStorageList[i].price}</td>
-                <td>${localStorageList[i].quantity}</td>
-                <td>${localStorageList[i].discount}</td>
-                <td>${localStorageList[i].totalprice}</td>
-                </tr>`;
-            }
-        }
-        }
-        ifOnlieTable();
+        
         
 
 

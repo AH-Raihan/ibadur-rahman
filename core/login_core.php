@@ -18,7 +18,7 @@ if (isset($_REQUEST['username']) && isset($_REQUEST['userpassword'])) {
     $loginUser = md5(sha1($_REQUEST['username']));
     $loginPassword = md5(sha1($_REQUEST['userpassword']));
 
-    echo $selectAdmin = "SELECT * FROM `admin` WHERE `username`='$loginUser' AND `userpassword`='$loginPassword'";
+    $selectAdmin = "SELECT * FROM `admin` WHERE `username`='$loginUser' AND `userpassword`='$loginPassword'";
     $runAdminQuery = mysqli_query($conn, $selectAdmin);
 
     $count = mysqli_num_rows($runAdminQuery);

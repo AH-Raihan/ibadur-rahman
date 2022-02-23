@@ -37,6 +37,9 @@ if(!isset($_COOKIE['PHPLGA'])){
           <a class="nav-link" href="./dailyInvest.php">প্রতিদিনের খরচ</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="./monthlyInvest.php">খরচ সমূহ</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./studentsList.php">ছাত্রের তালিকা</a>
         </li>
         <li class="nav-item">

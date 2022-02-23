@@ -9,11 +9,12 @@ $price = $_REQUEST["price"];
 $quantity = $_REQUEST["quantity"];
 $discount = $_REQUEST["discount"];
 $total_price = $_REQUEST["total_price"];
+$addedBy = $_REQUEST["addedBy"];
 $year = date("Y");
 $month = date("n");
 $date = date('j');
 
-$insert="INSERT INTO daily_invest (year,month,date,item,price,quantity,discount,total_price) VALUES('$year','$month','$date','$item','$price','$quantity','$discount','$total_price')";
+$insert="INSERT INTO daily_invest (year,month,date,item,price,quantity,discount,total_price,addedBy) VALUES('$year','$month','$date','$item','$price','$quantity','$discount','$total_price','$addedBy')";
 $runInsertQuery=mysqli_query($conn,$insert);
 
 if($runInsertQuery==true){

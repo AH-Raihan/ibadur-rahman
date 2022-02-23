@@ -78,10 +78,10 @@ $count=1;
     <div class="modalMy d-none" id="payModal">
         <div class="modalMyContainer">
             <div class="modalMyHeader">
-                <h1>দারুত তারবিয়া ছাত্রাবাস</h1>
-                <p class="addr">স্বপ্ননীড় ভবন, বালাদিল আমিন আবাসন, মিল্লাত বালিকা শাখা সংলগ্ন, উত্তর আউচপাড়া, টঙ্গী
+                <h1>মাদ্রাসাতু ইবাদুর রহমান</h1>
+                <p class="addr">দারুল ইসলাম ট্রাস্ট, উত্তর আউচপাড়া, টঙ্গী
                     গাজীপুর।</p>
-                <p class="mobile">মোবাইলঃ ০১৮৩৪-১৪৯৬২২, ০১৯৫৭-৬৮৭৪৪৪</p>
+                <p class="mobile">মোবাইলঃ 01714-332160</p>
                 <div class="row">
                     <p>রশিদ নং <input type="text" disabled value="0000" id="payRecieptNo"> </p>
                     <p class="takaAdayerRoshid">টাকা আদায়ের রশিদ</p>
@@ -138,19 +138,9 @@ $count=1;
                                 <td><input type="text" oninput="payTotal()" value="0" id="payadvance"></td>
                             </tr>
                             <tr>
-                                <td>০৪</td>
-                                <td>খাদ্য চার্জ</td>
-                                <td><input type="text" oninput="payTotal();" value="1800" id="payeating_fee"></td>
-                            </tr>
-                            <tr>
                                 <td>০৫</td>
                                 <td>সংস্থাপন</td>
                                 <td><input type="text" oninput="payTotal();" value="0" id="paysongsthapon"></td>
-                            </tr>
-                            <tr>
-                                <td>০৬</td>
-                                <td>সীট ভাড়া</td>
-                                <td><input type="text" oninput="payTotal();" value="2700" id="payseet_fee"></td>
                             </tr>
                             <tr>
                                 <td>০৭</td>
@@ -206,10 +196,10 @@ $count=1;
     <div class="modalMy d-none" id="paidModalJson">
         <div class="modalMyContainer">
             <div class="modalMyHeader">
-                <h1 class="">দারুত তারবিয়া ছাত্রাবাস</h1>
-                <p class="addr">স্বপ্ননীড় ভবন, বালাদিল আমিন আবাসন, মিল্লাত বালিকা শাখা সংলগ্ন, উত্তর আউচপাড়া, টঙ্গী
+                <h1 class="">মাদ্রাসাতু ইবাদুর রহমান</h1>
+                <p class="addr">দারুল ইসলাম আবাসন, উত্তর আউচপাড়া, টঙ্গী
                     গাজীপুর।</p>
-                <p class="mobile">মোবাইলঃ ০১৮৩৪-১৪৯৬২২, ০১৯৫৭-৬৮৭৪৪৪</p>
+                <p class="mobile">মোবাইলঃ  01714-332160</p>
                 <div class="row">
                     <p>রশিদ নং <span id="roshid_reciept_no"></span> </p>
                     <p class="takaAdayerRoshid">টাকা আদায়ের রশিদ</p>
@@ -251,19 +241,9 @@ $count=1;
                                 <td id="advance"> </td>
                             </tr>
                             <tr>
-                                <td>০৪</td>
-                                <td>খাদ্য চার্জ</td>
-                                <td id="eating_fee"></td>
-                            </tr>
-                            <tr>
                                 <td>০৫</td>
                                 <td>সংস্থাপন</td>
                                 <td id="songsthapon"></td>
-                            </tr>
-                            <tr>
-                                <td>০৬</td>
-                                <td>সীট ভাড়া</td>
-                                <td id="seet_fee"></td>
                             </tr>
                             <tr>
                                 <td>০৭</td>
@@ -383,13 +363,12 @@ $count=1;
                     let paidaddmission_form = document.getElementById('addmission_form').innerHTML = jsonData.addmission_form;
                     let paidaddmission_fee = document.getElementById('addmission_fee').innerHTML = jsonData.addmission_fee;
                     let paidadvance = document.getElementById('advance').innerHTML = jsonData.advance;
-                    let paideating_fee = document.getElementById('eating_fee').innerHTML = jsonData.eating_fee;
                     let paidsongsthapon = document.getElementById('songsthapon').innerHTML = jsonData.songsthapon;
-                    let paidseet_fee = document.getElementById('seet_fee').innerHTML = jsonData.seet_fee;
+        
                     let paidtiuson = document.getElementById('tiuson').innerHTML = jsonData.tiuson;
                     let paidogrim_bokeya = document.getElementById('ogrim_bokeya').innerHTML = jsonData.ogrim_bokeya;
                     let paidbibid = document.getElementById('bibid').innerHTML = jsonData.bibid;
-
+ 
                     let paidtotal = document.getElementById('total').innerHTML = jsonData.total;
                     let paidjoma = document.getElementById('joma').innerHTML = jsonData.joma;
                     let paidbokeya = document.getElementById('bokeya').innerHTML = jsonData.bokeya;

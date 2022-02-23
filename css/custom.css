@@ -11,7 +11,7 @@ body {
 }
 .title {
   text-align: center;
-  background: linear-gradient(to right, #2b5e6a -19%, #3b7f7e);
+  background: linear-gradient(to right, #25bc30 -19%, #2e9c92);
   padding: 10px;
   color: #f3f3f3;
   filter: drop-shadow(2px 4px 6px #888);
@@ -98,9 +98,9 @@ a {
 
 .AddBtn {
   padding: 10px;
-  border: 1px solid #d46c51;
+  border: 1px solid #843824;
   border-radius: 2px;
-  background: #d46c51;
+  background: #d62c00;
   color: white;
   text-decoration: none;
   margin: 10px;
@@ -205,7 +205,7 @@ table {
   width: 100%;
 }
 table thead tr {
-  background: #65a88d;
+  background: #5e5e5e;
   color: white;
   border-bottom: 1px solid;
 }
@@ -361,9 +361,12 @@ table tr th {
   padding: 10px;
 }
 .nav-item {
-  background: #6daa88;
+  background: #7c8681;
   margin: 1px;
   width: 100%;
+}
+.nav-item:hover{
+  background: rgb(46, 46, 46);
 }
 /* ========= ********* End Nav ********* =========== */
 

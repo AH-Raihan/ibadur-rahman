@@ -29,6 +29,8 @@ if(!isset($_COOKIE['PHPLGA'])){
   <div class="container">
 
 
+
+
     <nav class="navbar navbar-expand-md">
 
       <!-- Links -->

@@ -6,7 +6,7 @@ require_once('config.php');
 
 $reciept= random_int(0000, 9999) +0000;
 $payRecieptNo= $_REQUEST['payRecieptNo'];
-echo $studentId= $_REQUEST['studentid'];;
+$studentId= $_REQUEST['studentid'];
 
 $studentName = $_REQUEST['studentName'];
 $payDate = $_REQUEST['payDate'];
@@ -16,9 +16,7 @@ $payYear = $_REQUEST['payYear'];
 $payaddmission_form = $_REQUEST['payaddmission_form'];
 $payaddmission_fee = $_REQUEST['payaddmission_fee'];
 $payadvance = $_REQUEST['payadvance'];
-$payeating_fee = $_REQUEST['payeating_fee'];
 $paysongsthapon = $_REQUEST['paysongsthapon'];
-$payseet_fee = $_REQUEST['payseet_fee'];
 $paytiuson = $_REQUEST['paytiuson'];
 $payogrim_bokeya = $_REQUEST['payogrim_bokeya'];
 $paybibid = $_REQUEST['paybibid'];
@@ -34,7 +32,7 @@ if($paybokeya>0){
     $reciept= "==".$reciept; 
 }
 if($payjoma>0){
-$insertQuery="INSERT INTO receipt (reciept_no, student_id, studentName, date, class, month, year, addmission_form, addmission_fee, advance, eating_fee, songsthapon, seet_fee, tiuson, ogrim_bokeya, bibid, total, joma, bokeya) VALUES ('$reciept','$studentId','$studentName','$payDate','$payStudentClass','$payMonth','$payYear','$payaddmission_form','$payaddmission_fee','$payadvance','$payeating_fee','$paysongsthapon','$payseet_fee','$paytiuson','$payogrim_bokeya','$paybibid','$paytotal','$payjoma','$paybokeya')";
+$insertQuery="INSERT INTO receipt (reciept_no, student_id, studentName, date, class, month, year, addmission_form, addmission_fee, advance, songsthapon, tiuson, ogrim_bokeya, bibid, total, joma, bokeya) VALUES ('$reciept','$studentId','$studentName','$payDate','$payStudentClass','$payMonth','$payYear','$payaddmission_form','$payaddmission_fee','$payadvance','$paysongsthapon','$paytiuson','$payogrim_bokeya','$paybibid','$paytotal','$payjoma','$paybokeya')";
 $runInsertQuery=mysqli_query($conn,$insertQuery);
 
 if($runInsertQuery==true){

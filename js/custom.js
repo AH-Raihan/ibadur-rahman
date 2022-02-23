@@ -31,15 +31,13 @@ function payTotal() {
     let payaddmission_form = document.getElementById('payaddmission_form').value;
     let payaddmission_fee = document.getElementById('payaddmission_fee').value;
     let payadvance = document.getElementById('payadvance').value;
-    let payeating_fee = document.getElementById('payeating_fee').value;
     let paysongsthapon = document.getElementById('paysongsthapon').value;
-    let payseet_fee = document.getElementById('payseet_fee').value;
     let paytiuson = document.getElementById('paytiuson').value;
     let payogrim_bokeya = document.getElementById('payogrim_bokeya').value;
     let paybibid = document.getElementById('paybibid').value;
     let payjoma = document.getElementById('payjoma');
     let paybokeya = document.getElementById('paybokeya');
-    paytotal.value = Math.round(payaddmission_form) + Math.round(payaddmission_fee) + Math.round(payadvance) + Math.round(payeating_fee) + Math.round(paysongsthapon) + Math.round(payseet_fee) + Math.round(paytiuson) + Math.round(payogrim_bokeya) + Math.round(paybibid);
+    paytotal.value = Math.round(payaddmission_form) + Math.round(payaddmission_fee) + Math.round(payadvance) + Math.round(paysongsthapon)  + Math.round(paytiuson) + Math.round(payogrim_bokeya) + Math.round(paybibid);
 
     // payjoma.value = paytotal.value;
     paybokeya.value = paytotal.value - payjoma.value;
@@ -63,9 +61,7 @@ function submitPay() {
     let payaddmission_form = document.getElementById('payaddmission_form').value;
     let payaddmission_fee = document.getElementById('payaddmission_fee').value;
     let payadvance = document.getElementById('payadvance').value;
-    let payeating_fee = document.getElementById('payeating_fee').value;
     let paysongsthapon = document.getElementById('paysongsthapon').value;
-    let payseet_fee = document.getElementById('payseet_fee').value;
     let paytiuson = document.getElementById('paytiuson').value;
     let payogrim_bokeya = document.getElementById('payogrim_bokeya').value;
     let paybibid = document.getElementById('paybibid').value;
@@ -85,9 +81,7 @@ function submitPay() {
             payaddmission_form=${payaddmission_form}&&
             payaddmission_fee=${payaddmission_fee}&&
             payadvance=${payadvance}&&
-            payeating_fee=${payeating_fee}&&
             paysongsthapon=${paysongsthapon}&&
-            payseet_fee=${payseet_fee}&&
             paytiuson=${paytiuson}&&
             payogrim_bokeya=${payogrim_bokeya}&&
             paybibid=${paybibid}&&

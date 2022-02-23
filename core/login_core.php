@@ -5,7 +5,7 @@
   $dbpassword = "";
   $dbname = "dt_hostel";
 
-  $conn = mysqli_connect('bcdkqr4c53po8h6aw382-mysql.services.clever-cloud.com', 'ulgeuzpjytw1pvcp', 'jdrS8qUrqAeJ6w5vZj4G', 'bcdkqr4c53po8h6aw382');
+  $conn = mysqli_connect('bybmonngxlfa7u2wi12n-mysql.services.clever-cloud.com', 'u2juhbnhg6f3tqfh', 'UpKlhTpWZBnvXTISX2vh', 'bybmonngxlfa7u2wi12n');
   // $conn= mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
 
   if ($conn == false) {

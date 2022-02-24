@@ -38,7 +38,7 @@ if (!isset($_COOKIE['PHPLGA'])) {
                 <?php
                 require_once('core/config.php');
                 $date = date('j');
-                $select = "SELECT * FROM daily_invest WHERE date='$date'";
+                $select = "SELECT * FROM daily_invest";
                 $runQuery = mysqli_query($conn, $select);
                 $total = 0;
                 if ($runQuery == true) {

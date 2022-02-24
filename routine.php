@@ -16,10 +16,10 @@ if(!isset($_COOKIE['PHPLGA'])){
 </head>
 
 <body>
-    <h2 class="title"> <span class="backPage"></span>খাবার রুটিন</h2>
+    <h2 class="title"> <span class="backPage"></span>পড়ার রুটিন</h2>
     <div class="container box-shadow routine bg-light">
-    <h1 class="onlyPrint text-center">দারুত তারবিয়া ছাত্রাবাস</h1>
-    <h2 class="onlyPrint text-center">খাবার রুটিন</h2>
+    <h1 class="onlyPrint text-center">মাদ্রাসাতু ইবাদুর রহমান</h1>
+    <h2 class="onlyPrint text-center">পড়ার রুটিন</h2>
         <button class="AddBtn printNone" onclick="modalOpen('changeRoutineModal');">Change</button>
         <table class="table table-bordered">
             <thead>

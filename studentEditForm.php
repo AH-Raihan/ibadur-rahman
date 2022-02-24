@@ -19,7 +19,7 @@
     <div id="printCon" class="container jumbotron bg-white box-shadow">
     <div class="row onlyPrint">
                 <div class="col-sm-12">
-                    <h2 class="text-center">দারুত তারবিয়া ছাত্রাবাস</h2>
+                    <h2 class="text-center">মাদ্রাসাতু ইবাদুর রহমান</h2>
                     <h4 class="text-center">ভর্তি ফরম</h4>
                 </div>
 
@@ -113,37 +113,6 @@
                         <datalist id="classList">
                             <option value="১ম">
                             <option value="২য়">
-                            <option value="৩য়">
-                            <option value="৪র্থ">
-                            <option value="৫ম">
-                            <option value="৬ষ্ঠ">
-                            <option value="৭ম">
-                            <option value="৮ম">
-                            <option value="৯ম">
-                            <option value="১০ম">
-                            <option value="১০ম পুরাতন">
-                            <option value="আলিম ১ম বর্ষ">
-                            <option value="আলিম ২য় বর্ষ">
-                            <option value="ফাযিল">
-                            <option value="কামিল">
-                        </datalist>
-                    </div>
-                    <div class="col-sm-3 form">
-                        <label for="division">বিভাগ </label>
-                        <input value="<?php echo $student['subject']; ?>" type="text" name="division" list="divisionList" id="division" class="form-control">
-                        <datalist id="divisionList">
-                            <option value="সাধারণ"></option>
-                            <option value="বিজ্ঞান"></option>
-                        </datalist>
-                    </div>
-                    <div class="col-sm-3 form">
-                        <label for="section">শাখা *</label>
-                        <input value="<?php echo $student['section']; ?>" type="text" name="section" list="sectionList" id="section" class="form-control" required>
-                        <datalist id="sectionList">
-                            <option value="ক"></option>
-                            <option value="খ"></option>
-                            <option value="গ"></option>
-                            <option value="ঘ"></option>
                         </datalist>
                     </div>
                     <div class="col-sm-3 form">
@@ -153,19 +122,8 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-sm-6 form">
-                        <label for="tmCode">TM Id</label>
-                        <input value="<?php echo $student['tmCode']; ?>" type="text" name="tmCode" id="tmCode" class="form-control">
-                    </div>
-                    <div class="col-sm-6 form">
-                        <label for="tmPin">TM Pin/Number</label>
-                        <input value="<?php echo $student['tmPin']; ?>" type="number" name="tmPin" id="tmPin" class="form-control">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
                     <div class="col-sm-12 form">
-                        <label for="joinDate">ছাত্রাবাসে উঠার তারিখ</label>
+                        <label for="joinDate">ভর্তির তারিখ</label>
                         <input value="<?php echo $student['date_of_join']; ?>" type="date" name="joinDate" id="joinDate" class="form-control">
                     </div>
                 </div>

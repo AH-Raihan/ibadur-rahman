@@ -9,14 +9,14 @@ if(!isset($_COOKIE['PHPLGA'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>খাবারের সময়সূচী</title>
+    <title>ক্লাসের সময়সূচী</title>
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
-    <h2 class="title"> <span class="backPage"></span>খাবারের সময়সূচী</h2>
+    <h2 class="title"> <span class="backPage"></span>ক্লাসের সময়সূচী</h2>
     <div class="container box-shadow routine bg-light">
         <button class="AddBtn" onclick="modalOpen('changeRoutineModal');">Change</button>
         <table class="table table-bordered">

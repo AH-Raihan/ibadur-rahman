@@ -14,7 +14,7 @@
 
 <body style="background:#d5d5d5;">
     <span class="backPage"></span>
-    <h1 class="container title printNone text-white p-3 text-center">ছাত্রাবাসের ভর্তি ফরম </h1>
+    <h1 class="container title printNone text-white p-3 text-center">মাদরাসার ভর্তি ফরম </h1>
     <div class="container">
         <button class="btn btn-outline-success print row" onclick="window.print();">Print Form</button>
     </div>
@@ -184,13 +184,6 @@
     </script>
     <script src="js/init.js"></script>
     <script src="js/axios.min.js"></script>
-    <script>
-        var avatarImg = document.getElementById('avatarImg');
-        var tmCode = document.getElementById('tmCode');
-        tmCode.addEventListener('change', function() {
-            avatarImg.src = "https://tm.edu.bd/mms/images/student/" + tmCode.value + ".jpg";
-        });
-    </script>
     <script src="js/custom.js"></script>
 
 

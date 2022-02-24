@@ -60,7 +60,7 @@ if(!isset($_COOKIE['PHPLGA'])){
           <a class="nav-link" href="./studyRoutine.php">পড়ার রুটিন</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./eatingtime.php">ক্লাসের সময়সূচী</a>
+          <a class="nav-link" href="./classtime.php">ক্লাসের সময়সূচী</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./reciptAll.php">রশিদ বই</a>
